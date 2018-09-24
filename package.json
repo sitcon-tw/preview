@@ -14,6 +14,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "test": "echo 'No test'"
   }
 }
