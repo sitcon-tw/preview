@@ -1,5 +1,6 @@
 ---
 title: 首頁
+main: true
 ---
 
-# SITCON 學生計算機年會
+# 首頁

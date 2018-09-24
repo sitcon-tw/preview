@@ -1,12 +1,36 @@
 const longTitle = '學生計算機年會 | Students\' Information Technology Conference'
-const shortTitle = '學生計算機年會'
-const description = '以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。'
+const shortTitle = '學生計算機年會 | SITCON'
+const description = {
+  zhTW: `以學生為本、由學生自發舉辦，
+        SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，
+        更冀望所有對資訊有興趣的學生，
+        能夠在年會裏齊聚一堂，
+        彼此激盪、傳承、啟發。`,
+  enUS: `以學生為本、由學生自發舉辦，
+        SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，
+        更冀望所有對資訊有興趣的學生，
+        能夠在年會裏齊聚一堂，
+        彼此激盪、傳承、啟發。`
+}
+
 const url = 'https://sitcon.org'
 
 module.exports = {
   title: longTitle,
   description: description,
   dest: 'dist',
+  // locales: {
+  //   '/': {
+  //     lang: 'zh-TW', // 将会被设置为 <html> 的 lang 属性
+  //     title: longTitle,
+  //     description: description.zhTW
+  //   },
+  //   '/en/': {
+  //     lang: 'en-US',
+  //     title: longTitle,
+  //     description: description.enUS
+  //   }
+  // },
   head: [
     ['meta', {
       'http-equiv': 'X-UA-Compatible',
@@ -42,7 +66,7 @@ module.exports = {
     }],
     ['meta', {
       property: 'og:description',
-      content: description
+      content: description.zhTW
     }],
     ['meta', {
       property: 'twitter:title',
@@ -50,7 +74,7 @@ module.exports = {
     }],
     ['meta', {
       property: 'twitter:description',
-      content: description
+      content: description.zhTW
     }],
   ]
 }
