@@ -6,6 +6,10 @@
         <h1>SITCON<br>學生計算機年會</h1>
       </router-link>
       <div :class="$style.nav_items">
+        <router-link
+          to="/"
+          :class="[$style.main, {[$style.active]: $page.path === '/'}]"
+          @click.native="$emit('input', false)">首頁</router-link>
         <template v-for="item in items">
           <router-link
             v-if="!item.path.includes('http')"
@@ -89,6 +93,8 @@ export default {
       text-decoration none
   .nav_items
     margin-top 100px
+    .main
+      display none
     a
       display block
       padding 8px
@@ -104,6 +110,8 @@ export default {
     .logo
       display none
     .nav_items
+      .main
+        display block
       a
         text-align left
         position relative
