@@ -19,10 +19,11 @@ export default {
   data () {
     return {
       toggle: false,
-      mobile: window.matchMedia('(max-width: 1000px)').matches
+      mobile: false
     }
   },
   mounted () {
+    this.mobile = window.matchMedia('(max-width: 1000px)').matches
     window.onresize = () => {
       this.mobile = window.matchMedia('(max-width: 1000px)').matches
     }
