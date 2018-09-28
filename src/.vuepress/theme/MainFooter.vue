@@ -1,13 +1,13 @@
 <template>
   <footer :class="$style.footer">
     <div :class="$style.left">
-      <p>SITCON 學生計算機年會</p>
+      <p :class="$style.mobile_hidden">SITCON 學生計算機年會</p>
       <p>Student information technology conference</p>
-      <p>友站連結</p>
+      <p :class="$style.mobile_hidden">友站連結</p>
     </div>
     <div :class="$style.rule" />
     <div :class="$style.right">
-      <p>聯絡籌備團隊</p>
+      <p :class="$style.mobile_hidden">聯絡籌備團隊</p>
       <p>Mail: contact@sitcon.org</p>
       <p>Facebook: fb.me/sitcontw</p>
 
@@ -80,4 +80,28 @@ export default {
         width 50px
         height 50px
         padding-right 10px
+@media all and (max-width: 1000px)
+  .footer
+    position relative
+    height 200px
+    z-index 1
+    >*
+      display block
+    .left
+    .right
+      width 100%
+      height auto
+      padding 10px 20px
+      .mobile_hidden
+        display none
+    .rule
+      width 100%
+      height 2px
+      padding 0px 20px
+    .right
+      position static
+      .social_block
+        bottom 10px
+        left 20px
+        height 60px
 </style>
